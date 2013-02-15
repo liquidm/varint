@@ -47,6 +47,6 @@ void Init_varint()
     getbyte = rb_intern("getbyte");
     putbyte = rb_intern("putc");
 
-    rb_define_module_function(Varint, "encode", varint_encode, 2);
-    rb_define_module_function(Varint, "decode", varint_decode, 1);
+    rb_define_method(Varint, "encode", varint_encode, 2);
+    rb_define_method(Varint, "decode", varint_decode, 1);
 }
