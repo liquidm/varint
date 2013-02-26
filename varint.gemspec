@@ -6,7 +6,7 @@ require 'varint/version'
 Gem::Specification.new do |gem|
   gem.name          = "varint"
   gem.version       = Varint::VERSION
-  gem.authors       = ["Brian Palmer", "Benedikt Böhm", "Rob Marable", "Paulo Luis Franchini Casaretto"]
+  gem.authors       = ["Brian Palmer", "Benedikt Boehm", "Rob Marable", "Paulo Luis Franchini Casaretto"]
   gem.email         = ["brian@codekitchen.net", "bb@xnull.de"]
   gem.summary       = %q{varint C extension}
   gem.homepage      = "https://github.com/madvertise/varint"
