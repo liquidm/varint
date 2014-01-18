@@ -10,6 +10,7 @@ Gem::Specification.new do |gem|
   gem.email         = ["brian@codekitchen.net", "bb@xnull.de"]
   gem.summary       = %q{varint C extension}
   gem.homepage      = "https://github.com/madvertise/varint"
+  gem.license       = "BSD"
 
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
