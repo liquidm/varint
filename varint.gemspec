@@ -9,7 +9,7 @@ Gem::Specification.new do |gem|
   gem.authors       = ["Brian Palmer", "Benedikt Boehm", "Rob Marable", "Paulo Luis Franchini Casaretto"]
   gem.email         = ["brian@codekitchen.net", "bb@xnull.de"]
   gem.summary       = %q{varint C extension}
-  gem.homepage      = "https://github.com/madvertise/varint"
+  gem.homepage      = "https://github.com/liquidm/varint"
 
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
