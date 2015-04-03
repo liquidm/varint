@@ -12,10 +12,10 @@ static VALUE varint_encode(VALUE module, VALUE io, VALUE int_valV)
         byte = int_val & 0x7f;
         int_val >>= 7;
         if (int_val == 0) {
-            rb_funcall(io, putbyte, 1, INT2FIX(byte));
+            rb_funcall(io, putbyte, 1, INT2NUM(byte));
             return Qnil;
         } else {
-            rb_funcall(io, putbyte, 1, INT2FIX(byte | 0x80));
+            rb_funcall(io, putbyte, 1, INT2NUM(byte | 0x80));
         }
     }
 }
@@ -30,7 +30,7 @@ static VALUE varint_decode(VALUE module, VALUE io)
         if (shift >= 64) {
             rb_raise(rb_eArgError, "too many bytes when decoding varint");
         }
-        byte = (unsigned char)FIX2INT(rb_funcall(io, getbyte, 0));
+        byte = (unsigned char)NUM2INT(rb_funcall(io, getbyte, 0));
         int_val |= ((unsigned long long)(byte & 0x7f)) << shift;
         shift += 7;
         if ((byte & 0x80) == 0) {
